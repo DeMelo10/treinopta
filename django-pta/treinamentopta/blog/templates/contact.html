@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form method="POST">
+	{% csrf_token %}
+	<input placeholder='Nome' type="text" name="name" required="required">
+	<input placeholder='E-mail' type="email" name="email" required="required">
+	<textarea placeholder='Digite sua mensagem aqui' name='message' required="required"></textarea>
+	<button type='submit'>Enviar</button>
+</form>
+{% endblock %}
